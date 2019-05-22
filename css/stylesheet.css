@@ -66,6 +66,11 @@ html {
  
 }
 
+body{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 /* 
 
@@ -73,18 +78,20 @@ html {
 
 @font-face {
   font-family: myFirstFont;
-  src: url(../sf_comic_script/SF\ Comic\ Script.ttf);
+  src: url(../css/sf_comic_script/SF\ Comic\ Script.ttf);
 }
 
 body{
-    background-color: #EAF0CE;
+   background-image: url(../Imagenes/fondo3.png);
+  
+   background-size: cover;
 }
 .contenedorIndex{
 
   width: 85%;
   position: fixed;
-  top: 10%;
-  height: 70vh;
+  top: 18%;
+  height: 100vh;
   background-color: #5A7684;
 }
 
@@ -93,10 +100,48 @@ body{
   height: 5vh;
   position: fixed;
   font-family:myFirstFont;
+  text-decoration: none;
+ 
+  
+}
+
+.navegador{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+
+}
+.menuIndex a{
+  text-decoration: none;
+  font-size: 24pX;
+  font-family: myFirstFont;
+}
+
+.menuIndex {
+  float: left;  
+  display: block;
+  position: relative;
+  top: -35px;
 
 }
 
 
+.logo{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 12px;
+}
+
+.imagenDeTexto{
+  width: 220px;
+  height: 120px;
+}
 
 /*
   * Module Styles
