@@ -56,6 +56,48 @@ html {
   z-index: 1;
 }
 
+
+/* CRISTIAN */
+
+
+.contenedorIndex{
+  font-family: myFirstFont;
+ 
+ 
+}
+
+
+/* 
+
+*/
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../sf_comic_script/SF\ Comic\ Script.ttf);
+}
+
+body{
+    background-color: #EAF0CE;
+}
+.contenedorIndex{
+
+  width: 85%;
+  position: fixed;
+  top: 10%;
+  height: 70vh;
+  background-color: #5A7684;
+}
+
+.headerIndex{
+
+  height: 5vh;
+  position: fixed;
+  font-family:myFirstFont;
+
+}
+
+
+
 /*
   * Module Styles
   */
