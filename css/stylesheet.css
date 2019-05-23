@@ -1,0 +1,237 @@
+/*
+ *Reset Styles
+ */
+
+@import 'normalize.css';
+/* Change all elements to use border-box */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
+  * Base Styles
+  */
+
+
+   /* Layout Styles */
+.flip_card_container {
+  background-color: transparent;
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  display: inline-block;
+}
+.flip_card_sub_container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip_card_container:hover .flip_card_sub_container {
+  transform: rotateY(180deg);
+}
+.flip_card_front, .flip_card_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip_card_front {
+  background-color: #bbb;
+  color: black;
+  z-index: 2;
+}
+.flip_card_back {
+  background-color: rgb(226, 87, 6);
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+
+/* CRISTIAN */
+
+
+.contenedorIndex{
+  font-family: myFirstFont;
+}
+ 
+/* Anyelith */
+
+.eventosSubcontainer {
+  height: 100vh;
+  width: 100vh;
+  margin: auto;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
+.tituloEventos {
+  text-align: center;
+  font-size: 24px;
+}
+
+.filaEventos {
+  width: 100%;
+  height: 33%;
+  border: 1px solid black;
+  background-color: seagreen;
+}
+/* 
+
+*/
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../css/sf_comic_script/SF\ Comic\ Script.ttf);
+}
+
+body{
+   background-image: url(../Imagenes/fondo3.png);
+  
+   background-size: cover;
+}
+.contenedorIndex{
+
+  width: 85%;
+  position: fixed;
+  top: 18%;
+  height: 100vh;
+  background-color: #5A7684;
+}
+
+.headerIndex{
+
+  height: 5vh;
+  position: fixed;
+  font-family:myFirstFont;
+  text-decoration: none;
+ 
+  
+}
+
+
+.menuIndex a{
+  text-decoration: none;
+  font-size: 24pX;
+  font-family: myFirstFont;
+}
+
+.menuIndex {
+  float: left;  
+  display: block;
+  position: relative;
+  top: -35px;
+
+}
+
+
+.logo{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 12px;
+}
+
+.imagenDeTexto{
+  width: 220px;
+  height: 120px;
+}
+
+/*
+  * Module Styles
+  */
+
+/*
+  * Theme Styles
+  * 
+  *
+
+
+  /*----------Estilo NAV Dilan Bocanegra-------*/
+  nav {            overflow: hidden;
+
+    background: #94ABB6
+
+;
+
+}        nav ul {            list-style: none;
+
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;        }        nav ul li {            float: left;
+
+    font-size: 16pt;
+
+    font-weight: bold;
+
+    text-align: center;        }        nav ul li a {
+
+    padding: 1rem;
+
+    color: white;
+
+    display: block;
+
+    text-decoration: none;
+
+    /*Transiciones*/
+
+    -webkit-transition: 0.4s linear all;
+
+    -moz-transition: 0.4s linear all;
+
+    -o-transition: 0.4s linear all;
+
+    transition: 0.4s linear all;
+
+}        nav ul li a:hover {            background: #5A7684
+
+;
+
+}        nav ul li img {
+
+    width: 30px;
+
+    height: 30px;
+
+    margin-top: 12px;
+
+}        nav ul li input {
+
+    margin-top: 17px;
+
+    font-size: 15px;
+
+}
+
+
+/*
+.navegador{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+
+}*/
+
+  /*----------Estilo NAV Dilan Bocanegra-------*/
+  
