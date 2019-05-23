@@ -210,8 +210,6 @@ nav ul li input {
   text-align: center;
 }
 .contenedorModal{
-  display: flex;
-  flex-direction: row-reverse;
   margin-left: auto;
   margin-right: auto;
   width: 700px;
@@ -264,12 +262,8 @@ nav ul li input {
   padding: 5px;
   width: 150px;
 }
-.fa-times-circle{
- align-self: flex-start;
- color: #323d42;
- font-size: 40px;
- position: absolute;
-}
+/* estilo del icono de cierre del modal */
+
 .footerIndex {
   background-color: white;
   opacity: 0.4;
