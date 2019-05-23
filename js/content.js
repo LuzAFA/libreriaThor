@@ -1,7 +1,13 @@
 let data = {
+    "home": {
+        "contenidoPagina": "<h1> este es el home</h1>",
+    },
+    "consulta": {
+        "contenidoPagina": '../html/plantilla.html',
+    },
     "plantilla": {
         "title":
-            "otra pag ",
+            "contenido para pagina plantilla.html q es el index  ",
         "content1":
             "este es el primer contenido de la otra pag ",
         "content2":

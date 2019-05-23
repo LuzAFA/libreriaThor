@@ -425,6 +425,7 @@
 
         .contenedorIndex {
             font-family: myFirstFont;
+            overflow-y: scroll;
         }
 
         /* Anyelith */
@@ -605,7 +606,6 @@
           justify-content: center;
           flex-wrap: wrap;
 
-
         }*/
 
         /*----------Estilo NAV Dilan Bocanegra-------*/
@@ -615,19 +615,20 @@
 </head>
 
 <body>
-<img class=" imagenDeTexto" src="https://raw.githubusercontent.com/LuzAFA/libreriaThor/master/Imagenes/path842-20-2.png" alt="">
+<img class=" imagenDeTexto" src="https://raw.githubusercontent.com/LuzAFA/libreriaThor/master/Imagenes/path842-20-2.png"
+     alt="">
 <div class="contenedorIndex">
 
     <div class="navegador">
         <nav>
-
             <ul>
 
                 <li><a href="#eventos">Consulta</a></li>
 
                 <li><a href="#consultas">Eventos</a></li>
 
-                <li><img src="https://raw.githubusercontent.com/LuzAFA/libreriaThor/master/Imagenes/logo.png" alt=""></li>
+                <li><img src="https://raw.githubusercontent.com/LuzAFA/libreriaThor/master/Imagenes/logo.png" alt="">
+                </li>
 
                 <li><a href="#consultas">Opcion</a></li>
 
@@ -641,7 +642,7 @@
     </div>
     <h1 class="tituloIndex"></h1>
     <div class="contendorDinamico" id="contendorDinamico">
-
+        {{contenidoPagina}}
     </div>
     <footer class="footerIndex"></footer>
 </div>
