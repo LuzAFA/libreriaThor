@@ -210,6 +210,13 @@ nav ul li input {
   text-align: center;
 }
 
+.footerIndex {
+  background-color: white;
+  opacity: 0.4;
+  position: relative;
+  padding: 10px;
+
+}
 /*
 .navegador{
   width: 100%;
