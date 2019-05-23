@@ -209,7 +209,67 @@ nav ul li input {
   border: none;
   text-align: center;
 }
+.contenedorModal{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  height: 600px;
+  background-color: #455b66;
+}
+.contenedorsubModal {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  width: 700px;
+  height: 600px;
+  background-color: #455b66;
+}
 
+.modalDetalles {
+  text-align: center;
+  width: 40%;
+  height: 400px;
+  background-color: #5a7684;
+}
+
+.modalFoto {
+  -webkit-box-shadow: -15px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -15px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: -15px 10px 5px 0px rgba(0,0,0,0.75);;
+  text-align: center;
+  width: 40%;
+  height: 350px;
+  background-color: rgb(182, 131, 38);
+}
+
+.parrafoModal{
+  padding: 10px 30px 20px 30px;
+}
+
+.precioModal{
+  margin-top: 10px;
+  display: block;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.botonModal{
+  background-color: greenyellow;
+  margin-top: 20px;
+  font-size: 15px;
+  padding: 5px;
+  width: 150px;
+}
+.fa-times-circle{
+ align-self: flex-start;
+ color: #323d42;
+ font-size: 40px;
+ position: absolute;
+}
 /*
 .navegador{
   width: 100%;
