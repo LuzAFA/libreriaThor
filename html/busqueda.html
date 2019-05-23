@@ -1,123 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+<section id="contenedorBusqueda" class="contenedorContainer">
+    <div class="tituloBusqueda">
+        <h1>Busqueda</h1>
+    </div>
+    <form class="formularioBusqueda" action="#busqueda"></form>
+    <input type="text" id="cajaBusqueda" class="cajaBusqueda" placeholder="Busca tu libro o comic...">
+    <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</section>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Libreria Thor - Resultados de busqueda</title>
-    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+<hr>
 
-<body>
+<section id="resultadosBusqueda" class="resultadosBusqueda">
+    <div class="headerTarjetasResultados">
+        <h2>Se encontraron X resultados para Y</h2>
 
-    <section id="contenedorBusqueda" class="contenedorContainer">
-        <div class="tituloBusqueda">
-            <h1>Busqueda</h1>
-        </div>
-        <form class="formularioBusqueda" action="#busqueda"></form>
-        <input type="text" id="cajaBusqueda" class="cajaBusqueda" placeholder="Busca tu libro o comic...">
-        <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-    </section>
-
-    <hr>
-
-    <section id="resultadosBusqueda" class="resultadosBusqueda">
-        <div class="headerTarjetasResultados">
-            <h2>Se encontraron X resultados para Y</h2>
-
-            <div class="filadeTarjetas">
-                    <div class="flip_card_container">
-                        <div class="flip_card_sub_container">
-                            <div class="flip_card_front">
-                                <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
-                                    style="width:250px;height:300px;">
-                            </div>
-                            <div class="flip_card_back">
-                                <h1>Bruce Wayne</h1>
-                                <p class="cardProfesion">Empresario y Filantropo</p>
-                                <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
-                                    horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
-                                </p><br><br><br>
-                                <a href="perfil-Batman.html">Hoja de vida</a>
-                            </div>
-                        </div>
+        <div class="filadeTarjetas">
+            <div class="flip_card_container">
+                <div class="flip_card_sub_container">
+                    <div class="flip_card_front">
+                        <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
+                            style="width:250px;height:300px;">
                     </div>
-    
-                    <div class="flip_card_container">
-                        <div class="flip_card_sub_container">
-                            <div class="flip_card_front">
-                                <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
-                                    style="width:250px;height:300px;">
-                            </div>
-                            <div class="flip_card_back">
-                                <h1>Bruce Wayne</h1>
-                                <p class="cardProfesion">Empresario y Filantropo</p>
-                                <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
-                                    horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
-                                </p><br><br><br>
-                                <a href="perfil-Batman.html">Hoja de vida</a>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="flip_card_container">
-                        <div class="flip_card_sub_container">
-                            <div class="flip_card_front">
-                                <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
-                                    style="width:250px;height:300px;">
-                            </div>
-                            <div class="flip_card_back">
-                                <h1>Bruce Wayne</h1>
-                                <p class="cardProfesion">Empresario y Filantropo</p>
-                                <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
-                                    horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
-                                </p><br><br><br>
-                                <a href="perfil-Batman.html">Hoja de vida</a>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="flip_card_container">
-                        <div class="flip_card_sub_container">
-                            <div class="flip_card_front">
-                                <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
-                                    style="width:250px;height:300px;">
-                            </div>
-                            <div class="flip_card_back">
-                                <h1>Bruce Wayne</h1>
-                                <p class="cardProfesion">Empresario y Filantropo</p>
-                                <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
-                                    horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
-                                </p><br><br><br>
-                                <a href="perfil-Batman.html">Hoja de vida</a>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="flip_card_container">
-                        <div class="flip_card_sub_container">
-                            <div class="flip_card_front">
-                                <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
-                                    style="width:250px;height:300px;">
-                            </div>
-                            <div class="flip_card_back">
-                                <h1>Bruce Wayne</h1>
-                                <p class="cardProfesion">Empresario y Filantropo</p>
-                                <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
-                                    horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
-                                </p><br><br><br>
-                                <a href="perfil-Batman.html">Hoja de vida</a>
-                            </div>
-                        </div>
+                    <div class="flip_card_back">
+                        <h1>Bruce Wayne</h1>
+                        <p class="cardProfesion">Empresario y Filantropo</p>
+                        <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
+                            horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
+                        </p><br><br><br>
+                        <a href="perfil-Batman.html">Hoja de vida</a>
                     </div>
                 </div>
+            </div>
 
+            <div class="flip_card_container">
+                <div class="flip_card_sub_container">
+                    <div class="flip_card_front">
+                        <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
+                            style="width:250px;height:300px;">
+                    </div>
+                    <div class="flip_card_back">
+                        <h1>Bruce Wayne</h1>
+                        <p class="cardProfesion">Empresario y Filantropo</p>
+                        <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
+                            horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
+                        </p><br><br><br>
+                        <a href="perfil-Batman.html">Hoja de vida</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip_card_container">
+                <div class="flip_card_sub_container">
+                    <div class="flip_card_front">
+                        <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
+                            style="width:250px;height:300px;">
+                    </div>
+                    <div class="flip_card_back">
+                        <h1>Bruce Wayne</h1>
+                        <p class="cardProfesion">Empresario y Filantropo</p>
+                        <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
+                            horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
+                        </p><br><br><br>
+                        <a href="perfil-Batman.html">Hoja de vida</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip_card_container">
+                <div class="flip_card_sub_container">
+                    <div class="flip_card_front">
+                        <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
+                            style="width:250px;height:300px;">
+                    </div>
+                    <div class="flip_card_back">
+                        <h1>Bruce Wayne</h1>
+                        <p class="cardProfesion">Empresario y Filantropo</p>
+                        <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
+                            horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
+                        </p><br><br><br>
+                        <a href="perfil-Batman.html">Hoja de vida</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip_card_container">
+                <div class="flip_card_sub_container">
+                    <div class="flip_card_front">
+                        <img src="https://i.postimg.cc/rscZ5tYw/batman2.jpg" alt="Avatar"
+                            style="width:250px;height:300px;">
+                    </div>
+                    <div class="flip_card_back">
+                        <h1>Bruce Wayne</h1>
+                        <p class="cardProfesion">Empresario y Filantropo</p>
+                        <p>Amplia experiencia en temas de seguridad y vigilancia en jornadas continuas y
+                            horarios rotativos, manejo de equipos, toma de decisiones orientada a objetivos.
+                        </p><br><br><br>
+                        <a href="perfil-Batman.html">Hoja de vida</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
 
-</body>
+    </div>
+</section>
 
-</html>
+</div>
+<footer class="footerBusqueda"></footer>
+</div>
