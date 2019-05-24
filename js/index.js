@@ -39,7 +39,7 @@ http.createServer((request, response) => {
             });
             break;
 
-            case "recomendados":
+        case "recomendados":
             fs.readFile('../plantilla.html', (error, dato) => {
                 htmlContent += dato.toString();
                 htmlContent = remplaceContent(htmlContent, contenido.recomendados);
@@ -47,13 +47,9 @@ http.createServer((request, response) => {
                 response.end();
             });
             break;
+
     }
 
-
-    /*fs.readFile('../dataContent/comics.json', (Error, data) => {
-        let datos = JSON.parse(data);
-        //console.log(datos.comics[0].link + " ");
-    });*/
 
 }).listen(8080);
 
