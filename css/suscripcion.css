@@ -10,7 +10,7 @@
 	bottom: 0;
 	left: 30%;
 	opacity: 0;
-	background: rgb(253, 90, 90);
+	background: rgb(65, 85, 95);
 	z-index: 99999;
 	-webkit-transition: opacity 400ms ease-in;
 	-moz-transition: opacity 400ms ease-in;
