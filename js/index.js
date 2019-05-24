@@ -10,6 +10,7 @@ eventos = new events();
 http.createServer((request, response) => {
 
     let htmlContent = "";
+
     let urlPath = path.basename(url.parse(request.url).pathname);
 
     switch (urlPath) {
@@ -24,7 +25,7 @@ http.createServer((request, response) => {
         case "consulta":
             fs.readFile('../plantilla.html', (error, dato) => {
                 htmlContent += dato.toString();
-                htmlContent = remplaceContent(htmlContent, contenido.consulta);
+                htmlContent = remplaceContent(htmlContent, contenido.busqueda);
                 response.write(htmlContent);
                 response.end();
             });
@@ -32,16 +33,27 @@ http.createServer((request, response) => {
         case "eventos":
             fs.readFile('../plantilla.html', (error, dato) => {
                 htmlContent += dato.toString();
+                htmlContent = remplaceContent(htmlContent, contenido.eventos);
+                response.write(htmlContent);
+                response.end();
             });
-            htmlContent = remplaceContent(htmlContent, contenido.plantilla);
+            break;
+
+            case "recomendados":
+            fs.readFile('../plantilla.html', (error, dato) => {
+                htmlContent += dato.toString();
+                htmlContent = remplaceContent(htmlContent, contenido.recomendados);
+                response.write(htmlContent);
+                response.end();
+            });
             break;
     }
 
 
-    fs.readFile('../dataContent/comics.json', (Error, data) => {
+    /*fs.readFile('../dataContent/comics.json', (Error, data) => {
         let datos = JSON.parse(data);
         //console.log(datos.comics[0].link + " ");
-    })
+    });*/
 
 }).listen(8080);
 
@@ -59,8 +71,6 @@ function remplaceContent(file, data) {
         return htmlTexto;
     }
 }
-
-
 
 
 

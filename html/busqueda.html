@@ -119,7 +119,6 @@
     }
 </style>
 
-
 <section id="contenedorBusqueda" class="contenedorContainer">
     <div class="tituloBusqueda">
         <h1>Busqueda</h1>
@@ -137,6 +136,9 @@
         <h2>Se encontraron X resultados para Y</h2>
 
         <div class="filadeTarjetas">
+
+            {{tarjetasTodos}}
+
             <div class="flip_card_container">
                 <div class="flip_card_sub_container">
                     <div class="flip_card_front">
@@ -146,7 +148,7 @@
                     <div class="flip_card_back">
                         <h1 class="tituloLibro">Los Pitufos</h1>
                         <p class="precioLibro">$25000</p>
-                        <button type="button">Mas detalles</button> 
+                        <button type="button">Mas detalles</button>
                         <br><br>
                         <form class="add-to-cart" action="cart.html" method="post">
                             <div>
