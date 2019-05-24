@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscador</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /><!--Estilo buscador-->
+
+    <style>
+        #result {
+            position: absolute;
+            width: 100%;
+            max-width:870px;
+            cursor: pointer;
+            overflow-y: auto;
+            max-height: 400px;
+            box-sizing: border-box;
+            z-index: 1001;
+        }
+        .link-class:hover{
+            background-color:#f1f1f1;
+        }
+        .container {
+            width:900px;
+        }
+        h2 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<br /><br />
+<div class="container">
+    <h2 >Buscador</h2>
+    <br /><br />
+    <div id="divBuscador">
+        <input type="text" name="search" id="search" placeholder="Ingrese la busqueda" class="form-control" /><!--Clase boostrap-->
+    </div>
+    <ul class="list-group" id="result"></ul><!--Clase boostrap-->
+    <br />
+    <div id="libros" class="hide" width="80%">
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        $.ajaxSetup({ cache: false });//cache= no guarda cache en el navegador
+        $('#search').keyup(function(){//keyup reconoce al oprimir una tecla
+        $('#result').html('');//imprime en html
+        $('#state').val('');//atrapa el valor
+            var campoBusqueda = $('#search').val();
+            var expression = new RegExp(campoBusqueda, "i");//"i" busqueda no sensitiva
+            $.getJSON('comics_hoja2.json', function(data) {//cambiar users.json por el archivo json deseado
+                $.each(data, function(key, value){
+                    if (value.caratula.search(expression) != -1 || value.precio.search(expression) != -1)//cambiar value.nombre por value.autor, cambiar value.libro por la variable del json
+                    {/*la linea inferior muestra los resultados en orden*/
+                        var tagLi = document.getElementsByTagName("li")
+                        console.log(value.caratula)
+                        console.log("Se encontraron " + (tagLi.length + 1) + " resultados")
+                        var tag = document.getElementById("result")
+                        var li = document.createElement("li");
+                        li.setAttribute("id", key)
+                        li.setAttribute("onclick", "tomarDato(this.id)")
+                        li.setAttribute("class", "list-group-item link-class")
+                        var contenidoDiv = document.createTextNode(value.caratula + ' || ' + ' $' +value.precio );
+                        li.appendChild(contenidoDiv);
+                        tag.appendChild(li);
+
+                        // $('#result').append('<li id=key onclick="tomarDato(this.id)" class="list-group-item link-class">' +
+                        //     '<img src="'+ value.link +'" height="40" width="40" class="img-thumbnail" /> '+ value.caratula +' | <span class="text-muted">'+value.precio+'</span></li>');
+                    }
+                });
+            });
+        });
+
+        $('#result').on('click', 'li', function() {//organiza el resultado
+            var click_text = $(this).text().split('|');
+            $('#search').val($.trim(click_text[0]));
+            $("#result").html('');
+        });
+    });
+    
+    function tomarDato(valor) {
+        var libros = document.getElementById("libros")
+
+        libros.classList.remove("hide");
+
+        $.getJSON('comics_hoja2.json', function (data) {//cambiar users.json por el archivo json deseado
+
+            $.each(data, function (key, value) {
+                if (key == valor) {//cambiar value.nombre por value.autor, cambiar value.libro por la variable del json
+                    console.log(value.caratula)
+                    libros.innerHTML = ("<h1> Libro: " + value.caratula + "</h1>" + "<h3> Precio: $" + value.precio + "</h3>")
+                }
+            });
+        });
+    };
+
+</script>
+
