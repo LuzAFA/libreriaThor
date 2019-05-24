@@ -365,6 +365,7 @@
  */
 
 
+        /*@import 'css/normalize.css';
         /* Change all elements to use border-box */
 
         html {
@@ -426,6 +427,7 @@
 
         .contenedorIndex {
             font-family: myFirstFont;
+            overflow-y: scroll;
         }
 
         /* Anyelith */
@@ -601,6 +603,17 @@
 
     
         
+        /*
+        .navegador{
+          width: 100%;
+          height: 50px;
+          background-color: white;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+
+        }*/
 
         /*----------Estilo NAV Dilan Bocanegra-------*/
 
@@ -609,7 +622,8 @@
 </head>
 
 <body>
-<img class=" imagenDeTexto" src="https://raw.githubusercontent.com/LuzAFA/libreriaThor/master/Imagenes/path842-20-2.png" alt="">
+<img class=" imagenDeTexto" src="https://raw.githubusercontent.com/LuzAFA/libreriaThor/master/Imagenes/path842-20-2.png"
+     alt="">
 <div class="contenedorIndex">
 
     <div class="navegador">
@@ -617,13 +631,15 @@
 
             <ul>
 
-                <li><a href="#eventos">Consulta</a></li>
+                <li><a href="consulta">Consulta</a></li>
 
-                <li><a href="#consultas">Eventos</a></li>
+                <li><a href="eventos">Eventos</a></li>
 
-                <li><img src="https://raw.githubusercontent.com/LuzAFA/libreriaThor/master/Imagenes/logo.png" alt=""></li>
+                <li><a href="/"><img
+                        src="https://raw.githubusercontent.com/LuzAFA/libreriaThor/master/Imagenes/logo.png" alt=""></a>
+                </li>
 
-                <li><a href="#consultas">Opcion</a></li>
+                <li><a href="recomendados">Recomendados</a></li>
 
                 <li><input type="text" placeholder="¿Qué buscas?"></li>
             </ul>
@@ -638,9 +654,13 @@
 
 
 
+        {{contenidoPagina}}
     </div>
-    <footer class="footerIndex"></footer>
+
 </div>
+<footer class="footerIndex">
+    Thorgeek Enterprises - Copyright 2019
+</footer>
 </body>
 
 </html>
