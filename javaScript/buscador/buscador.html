@@ -53,19 +53,19 @@
         $('#state').val('');//atrapa el valor
             var campoBusqueda = $('#search').val();
             var expression = new RegExp(campoBusqueda, "i");//"i" busqueda no sensitiva
-            $.getJSON('comics_hoja2.json', function(data) {//cambiar users.json por el archivo json deseado
-                $.each(data, function(key, value){
-                    if (value.caratula.search(expression) != -1 || value.precio.search(expression) != -1)//cambiar value.nombre por value.autor, cambiar value.libro por la variable del json
+            $.getJSON('../data/libros.json', function(data) {//cambiar users.json por el archivo json deseado
+                $.each(data.comics, function(key, value){
+                    if (value.Titulo.search(expression) != -1 || value.precio.search(expression) != -1)//cambiar value.nombre por value.autor, cambiar value.libro por la variable del json
                     {/*la linea inferior muestra los resultados en orden*/
                         var tagLi = document.getElementsByTagName("li")
-                        console.log(value.caratula)
+                        console.log(value.Titulo)
                         console.log("Se encontraron " + (tagLi.length + 1) + " resultados")
                         var tag = document.getElementById("result")
                         var li = document.createElement("li");
                         li.setAttribute("id", key)
                         li.setAttribute("onclick", "tomarDato(this.id)")
                         li.setAttribute("class", "list-group-item link-class")
-                        var contenidoDiv = document.createTextNode(value.caratula + ' || ' + ' $' +value.precio );
+                        var contenidoDiv = document.createTextNode(value.Titulo+ ' || ' + ' $' +value.precio );
                         li.appendChild(contenidoDiv);
                         tag.appendChild(li);
 
@@ -88,12 +88,12 @@
 
         libros.classList.remove("hide");
 
-        $.getJSON('comics_hoja2.json', function (data) {//cambiar users.json por el archivo json deseado
+        $.getJSON('libros.json', function (data) {//cambiar users.json por el archivo json deseado
 
-            $.each(data, function (key, value) {
+            $.each(data.comics, function (key, value) {
                 if (key == valor) {//cambiar value.nombre por value.autor, cambiar value.libro por la variable del json
-                    console.log(value.caratula)
-                    libros.innerHTML = ("<h1> Libro: " + value.caratula + "</h1>" + "<h3> Precio: $" + value.precio + "</h3>")
+                    console.log(value.Titulo)
+                    libros.innerHTML = ("<h1> Libro: " + value.Titulo + "</h1>" + "<h3> Precio: $" + value.precio + "</h3>"+"<img   height=300 width=300 src="+value.caratula+">")
                 }
             });
         });
